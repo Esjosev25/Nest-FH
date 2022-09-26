@@ -4,7 +4,7 @@ import { setupCounter } from './counter'
 //import {name,number} from './bases/01-type'
 //import { pokemonIds, bulbasaur } from "./bases/02-objects";
 //import { charmander } from './bases/03-classes';
-import { charmander } from './bases/04-injection';
+import { charmander } from './bases/06-decorators';
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -17,7 +17,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
-  <h1>03. ${charmander.id} </h1> 
+  <h1>03. ${charmander.name} </h1> 
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
