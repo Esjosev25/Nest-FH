@@ -13,7 +13,6 @@ import {
 import { PokemonService } from './pokemon.service';
 import { CreatePokemonDto } from './dto/create-pokemon.dto';
 import { UpdatePokemonDto } from './dto/update-pokemon.dto';
-import { IsUUID } from 'class-validator';
 import { ParseMongoIdPipe } from '../common/pipes/parse-mongo-id.pipe';
 import { PaginationDto } from '../common/dto/pagination.dto';
 
@@ -29,15 +28,7 @@ export class PokemonController {
 
   @Get()
   findAll(@Query() paginationDto: PaginationDto) {
-    const { limit = 20, offset = 0 } = paginationDto;
-    return this.pokemonService
-      .findAll(paginationDto)
-      .limit(limit)
-      .skip(offset)
-      .sort({
-        no: 1,
-      })
-      .select('-__v');
+    return this.pokemonService.findAll(paginationDto);
   }
 
   @Get(':term')
