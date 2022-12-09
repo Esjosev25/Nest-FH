@@ -52,3 +52,12 @@ http://localhost:3000/api/v2/seed
 ## Stack
 * Mongo DB
 * Nest
+* Docker
+
+
+# Desplegar con docker
+* Crear la imagen
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+
+* Correr el contenedor
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
