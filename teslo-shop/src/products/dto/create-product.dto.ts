@@ -35,4 +35,10 @@ export class CreateProductDto {
   sizes: string[];
   @IsIn(['men', 'women', 'kid', 'unis'])
   gender: string;
+
+  @IsString({ each: true })
+  @MinLength(1, { each: true })
+  @IsArray()
+  @IsOptional()
+  tags: string[];
 }

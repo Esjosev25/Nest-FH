@@ -10,12 +10,14 @@ import {
 export class Product {
   @PrimaryGeneratedColumn('uuid')
   id: string;
-  @Column('text', {
+  @Column({
+    type: 'text',
     unique: true,
   })
   title: string;
 
-  @Column('float', {
+  @Column({
+    type: 'float',
     default: 0,
   })
   price: number;
@@ -48,6 +50,13 @@ export class Product {
     type: 'text',
   })
   gender: string;
+
+  @Column({
+    type: 'text',
+    array: true,
+    default: [],
+  })
+  tags: string[];
 
   @BeforeInsert()
   checkSlugInsert() {
