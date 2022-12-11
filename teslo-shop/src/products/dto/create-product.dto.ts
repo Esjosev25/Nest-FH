@@ -6,6 +6,7 @@ import {
   IsOptional,
   IsPositive,
   IsString,
+  Min,
   MinLength,
 } from 'class-validator';
 
@@ -26,7 +27,7 @@ export class CreateProductDto {
   slug?: string;
 
   @IsInt()
-  @IsPositive()
+  @Min(0)
   @IsOptional()
   stock?: number;
   @IsString({ each: true })
