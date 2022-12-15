@@ -30,4 +30,6 @@
 4. Cambiar las variables de entorno
 5. Crear y levantar la db
 ```docker-compose up -d```
-6. Levantar el ambiente ```yarn start:dev```
+6. Ejecutar seed 
+```http://localhost:3000/api/seed ```
+7. Levantar el ambiente ```yarn start:dev```

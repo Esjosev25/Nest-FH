@@ -5,7 +5,6 @@ export class PaginationDto {
   @IsOptional()
   @IsPositive()
   @Type(() => Number) //enableImplicitConversions: true
-  //TODO: Transformar
   limit?: number;
   @IsOptional()
   @IsPositive()
