@@ -12,8 +12,10 @@ import { CreateUserDto, LoginUserDto } from './dto';
 
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
+
 import { JwtService } from '@nestjs/jwt';
+import { JwtPayload } from './interfaces';
+import { AuthStatusDto } from './dto/auth-status.dto';
 
 @Injectable()
 export class AuthService {
@@ -63,6 +65,13 @@ export class AuthService {
       token: this.getJwtToken({ id: user.id }),
     };
     //TODO: retornar jwt
+  }
+
+  async checkAuthStatus(user: User) {
+    return {
+      ...user,
+      token: this.getJwtToken({ id: user.id }),
+    };
   }
   private getJwtToken(payload: JwtPayload) {
     const token = this.jwtService.sign(payload);
