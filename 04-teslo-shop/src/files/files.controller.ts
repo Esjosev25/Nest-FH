@@ -30,7 +30,6 @@ export class FilesController {
     @Param('imageName') imageName: string,
   ) {
     const path = this.filesService.getStaticProductImage(imageName);
-    console.log(path);
     res.sendFile(path);
   }
 
@@ -48,7 +47,6 @@ export class FilesController {
     if (!file)
       throw new BadRequestException('Make sure that the file is an image');
 
-    console.log(this.configService);
     const secureUrl = `${this.configService.get('HOST_API')}files/product/${
       file.filename
     }`;

@@ -2,9 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -25,11 +22,11 @@
 # Teslo API
 
 1. Clonar proyecto
-2. ```yarn install```
-3. Clonar el archivo ```.env.template``` y renombrarlo a __.env__
+2. `yarn install`
+3. Clonar el archivo `.env.template` y renombrarlo a **.env**
 4. Cambiar las variables de entorno
 5. Crear y levantar la db
-```docker-compose up -d```
-6. Ejecutar seed 
-```http://localhost:3000/api/seed ```
-7. Levantar el ambiente ```yarn start:dev```
+   `docker-compose up -d`
+6. Levantar el ambiente `yarn start:dev`
+7. Ejecutar seed
+   `http://localhost:3000/api/seed`
