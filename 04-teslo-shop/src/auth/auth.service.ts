@@ -15,7 +15,7 @@ import * as bcrypt from 'bcrypt';
 
 import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from './interfaces';
-import { AuthStatusDto } from './dto/auth-status.dto';
+
 
 @Injectable()
 export class AuthService {
